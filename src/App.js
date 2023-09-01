@@ -9,18 +9,7 @@ const levels = [
   "100 / 200",
   "150 / 300",
   "200 / 400",
-  "250 / 500",
-  "300 / 600",
-  "400 / 800",
-  "500 / 1000",
-  "700 / 1500",
-  "1K / 2k",
-  "1.5K / 3K",
-  "2K / 4K",
-  "3K / 6K",
-  "5K / 10K",
-  "10K / 20K",
-  "20K / 40K"
+  "250 / 500"
 ]
 
 const stopForce = 8;
@@ -56,6 +45,7 @@ function App() {
   const completeLevel = () => {
     playAudio();
     // Atualiza o nível
+    if (levels[level + 1] === undefined) stopCountdown()
     setBlind(levels[level])
     if (level === stopForce) {
       stopCountdown()
@@ -80,11 +70,12 @@ function App() {
               overtime
             />
           ) :
-            <span>00:00:00</span>}
+            levels[level] === undefined ? "Fim de torneio!" : <span>00:00:00</span>
+          }
         </span>
         <span className='blind'>{`${blind}`}</span>
         <span className='next-blind'>Próximo nível</span>
-        {`${levels[level]}`}
+        {levels[level] !== undefined ? `${levels[level]}` : ""}
         <button className='button' onClick={toggleCountdown}>
           {countdownStarted ? 'Parar' : 'Iniciar Contagem'}
         </button>
