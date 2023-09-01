@@ -20,8 +20,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 2vmin);
   color: white;
+}
+
+.timer {
+  font-size: 200px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: purple;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
+.blind {
+  font-size: 80px;
+  border: 1px solid #fff;
+  padding: 20px 100px;
+  background-color: #102c34;
+}
+
+.next-blind {
+  margin-top: 50px;
 }
 
 .App-link {
@@ -32,6 +58,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
