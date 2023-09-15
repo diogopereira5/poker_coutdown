@@ -1,3 +1,4 @@
+/* Estilos para dispositivos maiores */
 .App {
   text-align: center;
 }
@@ -61,5 +62,27 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+  .timer {
+    font-size: 60px;
+    max-width: 100%;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .blind {
+    font-size: 40px;
+    padding: 10px 20px;
+  }
+
+  .next-blind {
+    margin-top: 20px;
   }
 }
