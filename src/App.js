@@ -68,10 +68,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <span>
+        <span style={{ marginBottom: 30 }}>
           {`Nível ${level}`}
         </span>
-        <span className='timer'>
+        <span className='timer' style={{ marginBottom: 30 }}>
           {/* Mostra a contagem regressiva somente se countdownStarted for verdadeiro */}
           {countdownStarted ? (
             <Countdown
@@ -85,7 +85,7 @@ function App() {
             levels[level] === undefined ? "Fim de torneio!" : <span>00:00:00</span>
           }
         </span>
-        <span className='blind'>{`${blind}`}</span>
+        <span style={{ marginBottom: 20 }} className='blind'>{`${blind}`}</span>
         <span className='next-blind'>Próximo nível</span>
         {levels[level] !== undefined ? `${levels[level]}` : ""}
         <button className='button' onClick={toggleCountdown}>
